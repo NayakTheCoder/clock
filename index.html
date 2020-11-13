@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock!</title>
+    <style>
+        *{
+            background-color: black;
+        }
+        h1{
+           color: blue;
+           text-align: center;
+           font-size: 50px;
+           font-family: cursive;
+        }
+        #para{
+            color: blue;
+            text-align: center;
+            font-family: cursive;
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+   <h1>Clock</h1>
+   <br>
+   <br>
+   <br>
+   <p id="para"></p>
+</body>
+<script>
+    let para = document.getElementById("para");
+
+    setInterval(time,1000);
+    function time(){
+         var d = new Date();
+         var time = d.toLocaleTimeString();
+
+        para.innerHTML = time;
+    }
+    
+</script>
+</html>
